@@ -1,0 +1,21 @@
+You will ask a user to enter the date in the following format and save it to a variable called date:
+
+MM/DD/YYYY
+
+You will read the two characters for month and tell the user what month this was by printing the date given in the following format:
+
+23 October, 2022.
+
+How do we read the 1st and 2nd characters to determine the month?
+
+We need to pull a subset of the string and store it in another variable.  Since string values are a series of individual characters, we can read the string from a starting point to an ending point.  For this problem, we need to start with the first character (position 0) and read through to the second character (position 1).  So the command might look something like: 
+
+month = date[0:1]
+
+Unfortunately the command we  use is inclusive of the first value (the 0), but exclusive of the second value.  So, we will need to go one character further to get the second character.  Now the command will look like:
+
+month = date[0:2]
+
+You can then use the same technique to pull the day and year out of the date entered so you can properly print the required result.
+
+Useful tip:  Character positions work in both directions.  You can indicate position -1 to indicate the last character in the string.  Position -2 would be the second to last character.
